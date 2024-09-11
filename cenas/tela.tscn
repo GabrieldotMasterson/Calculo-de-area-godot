@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://bix33hwwfklnd"]
+
+[ext_resource type="Texture2D" uid="uid://n7vlnargax1r" path="res://img/Capturar2.PNG" id="1_5i1tt"]
+[ext_resource type="Script" path="res://scripts/tela.gd" id="1_xxx23"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vbjax"]
+font_size = 37
+
+[node name="TELA" type="Node2D"]
+script = ExtResource("1_xxx23")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 826.0
+offset_bottom = 610.0
+color = Color(0.0313726, 0.270588, 0.180392, 1)
+
+[node name="Capturar2" type="Sprite2D" parent="."]
+position = Vector2(241, 166)
+scale = Vector2(0.667089, 0.667089)
+texture = ExtResource("1_5i1tt")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 466.0
+offset_top = 114.0
+offset_right = 790.0
+offset_bottom = 307.0
+text = "APP CALCULADO QUADRADO "
+label_settings = SubResource("LabelSettings_vbjax")
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 433.0
+offset_top = 369.0
+offset_right = 495.0
+offset_bottom = 421.0
+text = "x"
+label_settings = SubResource("LabelSettings_vbjax")
+autowrap_mode = 2
+
+[node name="TextEdit_base" type="TextEdit" parent="."]
+offset_left = 163.0
+offset_top = 352.0
+offset_right = 410.0
+offset_bottom = 451.0
+placeholder_text = "Escreva aqui a base
+"
+
+[node name="TextEdit_altura" type="TextEdit" parent="."]
+offset_left = 478.0
+offset_top = 351.0
+offset_right = 725.0
+offset_bottom = 450.0
+placeholder_text = "Escreva aqui a altura
+
+"
+
+[node name="TextEdit_resultado" type="TextEdit" parent="."]
+offset_left = 479.0
+offset_top = 470.0
+offset_right = 726.0
+offset_bottom = 569.0
+placeholder_text = "RESULTADO"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 36.0
+offset_top = 463.0
+offset_right = 145.0
+offset_bottom = 572.0
+text = "calcular"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
